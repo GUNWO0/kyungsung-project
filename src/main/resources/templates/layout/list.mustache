@@ -1,0 +1,14 @@
+<h1>📘 나의 단어장</h1>
+
+<form method="post" action="/vocabulary">
+    <input type="text" name="originalText" placeholder="원문">
+    <input type="text" name="translatedText" placeholder="번역문">
+    <input type="text" name="targetLanguage" placeholder="언어(ex. en, ko)">
+    <button type="submit">저장</button>
+</form>
+
+<ul>
+    {{#vocabularies}}
+        <li>{{originalText}} → {{translatedText}} ({{targetLanguage}})</li>
+    {{/vocabularies}}
+</ul>
